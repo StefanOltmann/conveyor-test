@@ -6,7 +6,8 @@ plugins {
     id("dev.hydraulic.conveyor") version "1.8"
 }
 
-version = "0.1.0"
+/* For Conveyor */
+version = rootProject.version
 
 kotlin {
     jvm {
@@ -34,7 +35,9 @@ kotlin {
 dependencies {
     // Use the configurations created by the Conveyor plugin to tell Gradle/Conveyor where to find the artifacts for each platform.
     macAmd64(compose.desktop.macos_x64)
-    macAarch64(compose.desktop.macos_arm64)
+
+    // TODO
+    // macAarch64(compose.desktop.macos_arm64)
 }
 
 compose.desktop {
